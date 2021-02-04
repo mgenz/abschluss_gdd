@@ -1,0 +1,204 @@
+﻿.map_gdp {
+    height: 500px;
+    width: 49%;
+    float: left;
+    border-style: solid;
+    border-color: #424242;
+    border-width: 1px;
+    position: relative;
+    background-color: #2F5873;
+}
+
+    .map_gdp .gdp_legend {
+        background-color: #FFFFFF;
+        border-style: solid;
+        border-color: #424242;
+        border-width: 1px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+    }
+
+    .map_gdp .gdp_button {
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+.map_cotwo {
+    height: 500px;
+    width: 49%;
+    float: right;
+    border-style: solid;
+    border-color: #424242;
+    border-width: 1px;
+    position: relative;
+    background-color: #2F5873;
+}
+
+    .map_cotwo .cotwo_legend {
+        background-color: #FFFFFF;
+        border-style: solid;
+        border-color: #424242;
+        border-width: 1px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+    }
+
+    .map_cotwo .cotwo_button {
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+
+.table {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: #424242;
+    border-width: 1px;
+    background-color: gray;
+    table-layout: fixed;
+}
+
+    .table .tr {
+        background-color: white;
+        text-align: center;
+    }
+
+/*Slider*/
+.slidecontainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* The slider itself */
+.slider {
+    margin-top: 15px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-style: solid;
+        border-color: #424242;
+        border-width: 1px;
+        border-radius: 50%;
+        background: #3B8ABF;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+    }
+
+.header {
+    height: 100px;
+    border-width: 9px;
+    border-style: ridge;
+    border-color: #3F75A4;
+    background-color: skyblue;
+    margin-bottom: 10px;
+}
+
+    .header .txt {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .header .logo {
+        float: left;
+        z-index: 1;
+        height: 100px;
+        width: 100px;
+    }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    text-align: center;
+}
+
+/*Popup*/
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -150px;
+    min-width: 280px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center
+}
+
+    .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+
+        margin-left: -10px;
+    }
+
+    .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+
+        margin-left: -11px;
+    }
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+    .ol-popup-closer:after {
+        content: "✖";
+    }
