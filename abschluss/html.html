@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Map Scripte-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+    <!--Titel-->
+    <title>Abschlussprojekt</title>
+</head>
+<body style="background-color: #152733;">
+    <div class="sample-header">
+        <div class="sample-header-section">
+            <h1>Zusammenhang von Bruttoinlandsprodukt und CO<sub>2</sub>-Ausstoß pro Kopf</h1>
+            <h2>Abschlussprojekt im Modul Geodatendienste</h2>
+        </div>
+    </div>
+    <div class="sample-section-wrap">
+        <div class="sample-section">
+            <div id="map_gdp" class="map_gdp">
+                <input id="gdp_button" class="gdp_button" type='image' src="U:\Geoserver\data_dir\www\abschluss\daten\icons\fullscreen_r.png" onclick='fullscreen_gdp();' />
+                <div id="gdp_legend" class="gdp_legend">
+                    <img src="http://localhost:8585/geoserver/wms?REQUEST=GetLegendGraphic&LAYER=gdp&FORMAT=image/png">
+                </div>
+            </div>
+            <div id="map_cotwo" class="map_cotwo">
+                <input id="cotwo_button" class="cotwo_button" type='image' src="U:\Geoserver\data_dir\www\abschluss\daten\icons\fullscreen_r.png" onclick='fullscreen_cotwo();' />
+                <div id="cotwo_legend" class="cotwo_legend">
+                    <img src="http://localhost:8585/geoserver/wms?REQUEST=GetLegendGraphic&LAYER=cotwo&FORMAT=image/png">
+                </div>
+            </div>
+            <div id="gdp_popup" class="ol-popup">
+                <a href="#" id="gdp_popup-closer" class="ol-popup-closer"></a>
+                <div id="gdp_popup-content"></div>
+            </div>
+            <div id="cotwo_popup" class="ol-popup">
+                <a href="#" id="cotwo_popup-closer" class="ol-popup-closer"></a>
+                <div id="cotwo_popup-content"></div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="1980" max="2018" value="2000" class="slider" id="myRange" onchange="showVal(this.value)">
+            </div>
+            <div>
+                <p>
+                    <table id="table" class="table">
+                        <tr id="th" class="th"><th>Year:</th><th>Land:</th></tr>
+                        <tr id="tr" class="tr"><td id="date_value"></td><td id="land">&nbsp</td></tr>
+                    </table>
+                </p>
+                <img id="corr_year"/>
+                <img id="corr_ges" src="U:\Geoserver\data_dir\www\abschluss\daten\corr\pearson_ganz.png" />
+            </div>
+            <script src="java.js"></script>
+            <div class="footer">
+                <p id="copyright">©Louis Trinkle & Marvin Genz</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
